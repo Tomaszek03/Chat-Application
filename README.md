@@ -41,19 +41,68 @@ No external deployment is required.
 #### Prerequisites
 * `Docker` installed
 * `Docker Compose` installed
+* `wscat` installed for usage in terminal
 
 #### Run the application
 1. Clone this repository
     ```bash
     git clone https://github.com/Tomaszek03/Chat-Application.git
     ```
-2. Start the services
+
+2. Build a project with fat-jar
+    ```bash
+    ./gradlew shadowJar
+    ```
+3. Start the services
     ```bash
     docker-compose up --build
     ```
 
-3. The services will be available at:
+4. The services will be available at:
 * WebSocket endpoint: `ws://localhost:8080/{room_id}?username=yourName`
 * REST endpoint (chat history): `http://localhost:8080/chat/{room_id}`
 
-### Example usage
+### Example usage (terminal)
+
+**Terminal 1.**
+1. Connect to room as `User1`:
+    ```bash
+    wscat -c "ws://localhost:8080/room1?username=User1"
+    ```
+2. Send message (for example type `hello` and press `ENTER`)
+
+<br>
+
+**Terminal 2.**
+1. Connect to room as `User2`:
+    ```bash
+    wscat -c "ws://localhost:8080/room1?username=User2"
+    ```
+2. Send message (for example type `hi` and press `ENTER`)
+
+<br>
+
+**Terminal 3.**
+<br>Get messages history from `room1`:
+```bash
+curl http://localhost:8080/chat/room1
+```
+The history is visible in the `Content` field in format:
+`[{time}] {user}: {message}`
+
+### Example usage (Postman)
+
+1. `User1` sends message in `room1`
+    ![user1_msg_sent](./readme_images/user1_msg_sent.png)
+
+2. `User2` receives `User1`'s message in `room1`
+   ![user2_msg_received](./readme_images/user2_msg_received.png)
+
+3. `User2` sends message in `room1`
+   ![user2_msg_sent](./readme_images/user2_msg_sent.png)
+
+4. `User1` receives `User2`'s message in `room1`
+   ![user1_msg_received](./readme_images/user1_msg_received.png)
+
+5. Chat history from `room1`
+6. ![messages_history](./readme_images/messages_history.png)
