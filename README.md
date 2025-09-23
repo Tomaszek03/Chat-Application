@@ -1,5 +1,5 @@
 # Chat Application Backend
-### Chat application created by using Java and Micronaut
+### Chat application created using Java, Micronaut, Redis, WebSockets and REST API
 
 ### Project goal
 The purpose of this project is to build a real-time chat application backend that allows users to communicate within multiple chat rooms. 

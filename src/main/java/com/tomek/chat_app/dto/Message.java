@@ -1,5 +1,8 @@
-package com.tomek.dto;
+package com.tomek.chat_app.dto;
 
+import io.micronaut.serde.annotation.Serdeable;
+
+@Serdeable
 public class Message {
     private String id;
     private String username;

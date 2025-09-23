@@ -27,8 +27,8 @@ application {
     mainClass = "com.tomek.Application"
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("21")
-    targetCompatibility = JavaVersion.toVersion("21")
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 
@@ -57,5 +57,5 @@ micronaut {
 
 
 tasks.named("dockerfileNative") {
-    jdkVersion = "21"
+    jdkVersion = "17"
 }
