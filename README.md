@@ -105,4 +105,4 @@ The history is visible in the `Content` field in format:
    ![user1_msg_received](readme_images/user1_msg_received.png)
 
 5. Chat history from `room1`
-6. ![messages_history](readme_images/messages_history.png)
+   ![messages_history](readme_images/messages_history.png)
