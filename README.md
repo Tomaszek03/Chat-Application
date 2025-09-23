@@ -93,16 +93,16 @@ The history is visible in the `Content` field in format:
 ### Example usage (Postman)
 
 1. `User1` sends message in `room1`
-    ![user1_msg_sent](./readme_images/user1_msg_sent.png)
+    ![user1_msg_sent](readme_images/user1_msg_sent.png)
 
 2. `User2` receives `User1`'s message in `room1`
-   ![user2_msg_received](./readme_images/user2_msg_received.png)
+   ![user2_msg_received](readme_images/user2_msg_received.png)
 
 3. `User2` sends message in `room1`
-   ![user2_msg_sent](./readme_images/user2_msg_sent.png)
+   ![user2_msg_sent](readme_images/user2_msg_sent.png)
 
 4. `User1` receives `User2`'s message in `room1`
-   ![user1_msg_received](./readme_images/user1_msg_received.png)
+   ![user1_msg_received](readme_images/user1_msg_received.png)
 
 5. Chat history from `room1`
-6. ![messages_history](./readme_images/messages_history.png)
+6. ![messages_history](readme_images/messages_history.png)
