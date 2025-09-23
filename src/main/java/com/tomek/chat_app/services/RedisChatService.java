@@ -9,7 +9,6 @@ import io.lettuce.core.api.sync.RedisCommands;
 import jakarta.annotation.PreDestroy;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
