@@ -49,9 +49,9 @@ No external deployment is required.
     git clone https://github.com/Tomaszek03/Chat-Application.git
     ```
 
-2. Build a project with fat-jar
+2. Build a project
     ```bash
-    ./gradlew shadowJar
+    ./gradlew clean build
     ```
 3. Start the services
     ```bash

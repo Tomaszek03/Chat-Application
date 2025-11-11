@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-class ChatControllerTest {
+class ChatHistoryControllerTest {
     @Test
     void messagesFormattingTest() {
         List<Message> messages = new ArrayList<>();
@@ -30,10 +30,10 @@ class ChatControllerTest {
             }
         };
 
-        ChatController controller = new ChatController();
+        ChatHistoryController controller = new ChatHistoryController();
         controller.redisChatService = mockRedisChatService;
 
-        List<String> result = controller.history("room1");
+        List<String> result = controller.getChatHistory("room1");
 
         assertThat(result).hasSize(2);
         assertThat(result.get(0)).contains("[").contains("user1:").contains("message1");
